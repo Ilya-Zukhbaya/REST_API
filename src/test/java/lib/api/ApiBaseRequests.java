@@ -4,7 +4,9 @@ import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import lib.utils.DGRandomString;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
@@ -180,7 +182,6 @@ public class ApiBaseRequests {
                 .when()
                 .post("/api/user/login")
                 .then()
-                .statusCode(200)
                 .extract()
                 .response();
     }
@@ -278,7 +279,7 @@ public class ApiBaseRequests {
                 .cookie("auth_sid", cookie)
                 .header("x-csrf-token", header)
                 .when()
-                .get("https://playground.learnqa.ru/api/user/{id}")
+                .get("/api/user/{id}")
                 .then()
                 .extract()
                 .response();
@@ -293,9 +294,22 @@ public class ApiBaseRequests {
                 .header("x-csrf-token", header)
                 .body(body)
                 .when()
-                .put("https://playground.learnqa.ru/api/user/{id}")
+                .put("/api/user/{id}");
+    }
+
+    @Step("UPDATE REQUEST TO /api/user/{id}")
+    public Response updateUserAndGetResponse(String userId, String cookie, String header, Map<String, String> body) {
+        return RestAssured
+                .given()
+                .pathParam("id", userId)
+                .cookie("auth_sid", cookie)
+                .header("x-csrf-token", header)
+                .body(body)
+                .when()
+                .put("/api/user/{id}")
                 .then()
-                .statusCode(200);
+                .extract()
+                .response();
     }
 
     @Step("DELETE REQUEST TO /api/user/{id}")
@@ -306,8 +320,33 @@ public class ApiBaseRequests {
                 .cookie("auth_sid", cookie)
                 .header("x-csrf-token", header)
                 .when()
-                .delete("https://playground.learnqa.ru/api/user/{id}")
+                .delete("/api/user/{id}")
                 .then()
                 .statusCode(200);
+    }
+
+    @Step("DELETE REQUEST TO /api/user/{id}")
+    public Response deleteUserAndGetResponse(String userId, String cookie, String header) {
+        return RestAssured
+                .given()
+                .pathParam("id", userId)
+                .cookie("auth_sid", cookie)
+                .header("x-csrf-token", header)
+                .when()
+                .delete("/api/user/{id}")
+                .then()
+                .extract()
+                .response();
+    }
+
+    @Step("CREATE USER WITH RANDOM DATA")
+    public Map<String, String> createUserWithRandomData() {
+        DGRandomString randomString = new DGRandomString();
+        Map<String, String> authRandomMap = randomString.generateAuthData();
+
+        Response response = postUserWithBody(authRandomMap);
+        authRandomMap.put("userId", response.jsonPath().getString("id"));
+
+        return authRandomMap;
     }
 }

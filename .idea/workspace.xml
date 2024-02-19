@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b06dbdb6-bf6d-4665-95fb-0491cb9f8306" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/DeleteUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeFour.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lib/BaseCase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lib/BaseCase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lib/api/ApiBaseRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/lib/api/ApiBaseRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeFive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeFive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +64,69 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.HomeFour">
+  <component name="RunManager" selected="JUnit.DeleteUser">
+    <configuration name="DeleteUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="restapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DeleteUser" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteUser.checkDeleteOtherUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="restapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DeleteUser" />
+      <option name="METHOD_NAME" value="checkDeleteOtherUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DeleteUser.checkDeletePositiveScenario" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="restapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.DeleteUser" />
+      <option name="METHOD_NAME" value="checkDeletePositiveScenario" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeFive" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="restapi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.HomeFive" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HomeFour" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="restapi" />
       <extension name="coverage">
@@ -77,68 +142,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HomeFour.createUserNegative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="restapi" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeFour" />
-      <option name="METHOD_NAME" value="createUserNegative" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeThree" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="restapi" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeThree" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeTwo" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="restapi" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeTwo" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="HomeTwo.checkRedirects" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="restapi" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="tests" />
-      <option name="MAIN_CLASS_NAME" value="tests.HomeTwo" />
-      <option name="METHOD_NAME" value="checkRedirects" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
       <deployment type="dockerfile">
         <settings />
@@ -147,11 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DeleteUser" />
+        <item itemvalue="JUnit.DeleteUser.checkDeleteOtherUser" />
+        <item itemvalue="JUnit.DeleteUser.checkDeletePositiveScenario" />
         <item itemvalue="JUnit.HomeFour" />
-        <item itemvalue="JUnit.HomeFour.createUserNegative" />
-        <item itemvalue="JUnit.HomeThree" />
-        <item itemvalue="JUnit.HomeTwo" />
-        <item itemvalue="JUnit.HomeTwo.checkRedirects" />
+        <item itemvalue="JUnit.HomeFive" />
       </list>
     </recent_temporary>
   </component>
@@ -175,9 +178,19 @@
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/lib/utils/DGRandomString.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="22" />
+          <url>file://$PROJECT_DIR$/src/test/java/tests/HomeFive.java</url>
+          <line>111</line>
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/HomeFive.java</url>
+          <line>141</line>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/tests/DeleteUser.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
