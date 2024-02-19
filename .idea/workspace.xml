@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b06dbdb6-bf6d-4665-95fb-0491cb9f8306" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/lib/BaseCase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lib/HardAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lib/api/ApiBaseRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/lib/utils/DGRandomString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/HomeFive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/HomeFour.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/HomeThree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HomeOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HomeTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/HomeFour.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/HomeFour.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

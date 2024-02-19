@@ -1,5 +1,9 @@
 package tests;
 
+import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import lib.BaseCase;
@@ -7,12 +11,17 @@ import lib.HardAssertions;
 import lib.api.ApiBaseRequests;
 import lib.utils.DGRandomString;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
+@Epic("HomeWork Four Epic")
+@Feature("HomeWork Four feature")
+@Story("HomeWork Four Story")
 public class HomeFour extends BaseCase {
 
     //region Context
@@ -38,6 +47,9 @@ public class HomeFour extends BaseCase {
 
     //region Tests
     @Test
+    @DisplayName("Негативная проверка создания пользователя")
+    @Description("Проверяем невозможность создать пользователя с неправильным email")
+    @Tag("API")
     public void createUserNegative() {
         userMap.put("email", "vinkotov@example.com");
 
@@ -48,6 +60,9 @@ public class HomeFour extends BaseCase {
     }
 
     @Test
+    @DisplayName("Позитивная проверка создания пользователя")
+    @Description("Проверяем возможность создать пользователя с правильным email")
+    @Tag("API")
     public void createUserPositive() {
         String email = randomString.generateRandomString(10) + "@test.com";
         userMap.put("email", email);
@@ -59,6 +74,9 @@ public class HomeFour extends BaseCase {
     }
 
     @Test
+    @DisplayName("Негативная проверка получения данных несуществующего пользователя")
+    @Description("Проверяем невозможность получения данных несуществующего пользователя")
+    @Tag("API")
     public void getUserDataNegative() {
         int min = 100;
         int max = 300;
@@ -72,6 +90,9 @@ public class HomeFour extends BaseCase {
     }
 
     @Test
+    @DisplayName("Позитивная проверка получения данных существующего пользователя")
+    @Description("Проверяем возможность получения данных существующего пользователя")
+    @Tag("API")
     public void getUserDataPositive() {
         Response tokens = apiBaseRequests.postUserLoginWithBody(authMap);
 
@@ -86,6 +107,9 @@ public class HomeFour extends BaseCase {
     }
 
     @Test
+    @DisplayName("CRUD Пользователя")
+    @Description("Проверяем возможность создать/получить/обновить/удалить данные пользователя")
+    @Tag("API")
     public void checkPutUser() {
         //region CreateUser
         Map<String, String> authRandomMap = randomString.generateAuthData();
