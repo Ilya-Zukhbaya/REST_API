@@ -21,8 +21,6 @@ public class HomeOne extends BaseCase {
     //region Context
     private static String user;
     private static String pass;
-    private static String login;
-    private static String password;
     private static Map<String, Object> bodyMap;
     private static Map<String, String> queryMap;
     private String authCookie;
@@ -35,16 +33,14 @@ public class HomeOne extends BaseCase {
 
         user = "Test";
         pass = "Wall";
-        login = "secret_login";
-        password = "secret_pass";
 
         bodyMap = new HashMap<>();
         bodyMap.put("name", user);
         bodyMap.put("pass", pass);
 
         queryMap = new HashMap<>();
-        queryMap.put("login", login);
-        queryMap.put("password", password);
+        queryMap.put("login", "secret_login");
+        queryMap.put("password", "secret_pass");
     }
 
     //region Tests

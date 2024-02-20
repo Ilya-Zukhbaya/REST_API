@@ -4,9 +4,7 @@ import io.qameta.allure.Step;
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
-import lib.utils.DGRandomString;
 
-import java.util.HashMap;
 import java.util.Map;
 
 import static io.restassured.RestAssured.given;
@@ -337,16 +335,5 @@ public class ApiBaseRequests {
                 .then()
                 .extract()
                 .response();
-    }
-
-    @Step("CREATE USER WITH RANDOM DATA")
-    public Map<String, String> createUserWithRandomData() {
-        DGRandomString randomString = new DGRandomString();
-        Map<String, String> authRandomMap = randomString.generateAuthData();
-
-        Response response = postUserWithBody(authRandomMap);
-        authRandomMap.put("userId", response.jsonPath().getString("id"));
-
-        return authRandomMap;
     }
 }

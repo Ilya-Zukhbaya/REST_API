@@ -25,7 +25,6 @@ import java.util.Map;
 public class HomeTwo extends BaseCase {
 
     //region Context
-    private static final String login = "super_admin";
     private static final ApiBaseRequests apiBaseRequests = new ApiBaseRequests();
     static WebDriver driver = new SafariDriver();
     private String authCookie;
@@ -124,7 +123,7 @@ public class HomeTwo extends BaseCase {
         List<WebElement> passwords = driver.findElements(By.xpath(".//td[contains(@align, 'left')]"));
 
         Map<String, String> authMap = new HashMap<>();
-        authMap.put("login", login);
+        authMap.put("login", "super_admin");
         authMap.put("password", "password");
 
         for (WebElement password : passwords) {

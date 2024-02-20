@@ -104,6 +104,13 @@
       <artifactId>allure-rest-assured</artifactId>
       <version>2.21.0</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.18.26</version>
+      <scope>provided</scope>
+    </dependency>
   </dependencies>
 
   <build>
@@ -149,6 +156,22 @@
           <source>16</source>
           <target>16</target>
         </configuration>
+      </plugin>
+      <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.5.1</version>
+      <configuration>
+        <source>16</source>
+        <target>16</target>
+        <annotationProcessorPaths>
+          <path>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+          </path>
+        </annotationProcessorPaths>
+      </configuration>
       </plugin>
     </plugins>
   </build>

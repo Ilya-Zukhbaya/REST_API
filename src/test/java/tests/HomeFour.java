@@ -20,7 +20,7 @@ import java.util.Map;
 import java.util.Random;
 
 @Epic("HomeWork Four Epic")
-@Feature("HomeWork Four feature")
+@Feature("HomeWork Four Feature")
 @Story("HomeWork Four Story")
 public class HomeFour extends BaseCase {
 
@@ -47,8 +47,8 @@ public class HomeFour extends BaseCase {
 
     //region Tests
     @Test
-    @DisplayName("Негативная проверка создания пользователя")
-    @Description("Проверяем невозможность создать пользователя с неправильным email")
+    @DisplayName("Негативная проверка создания пользователя с существующим email")
+    @Description("Проверяем невозможность создать пользователя с существующим email")
     @Tag("API")
     public void createUserNegative() {
         userMap.put("email", "vinkotov@example.com");
@@ -60,7 +60,7 @@ public class HomeFour extends BaseCase {
     }
 
     @Test
-    @DisplayName("Позитивная проверка создания пользователя")
+    @DisplayName("Позитивная проверка создания пользователя с правильным email")
     @Description("Проверяем возможность создать пользователя с правильным email")
     @Tag("API")
     public void createUserPositive() {

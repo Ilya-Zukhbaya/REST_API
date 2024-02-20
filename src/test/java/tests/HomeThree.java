@@ -28,8 +28,6 @@ public class HomeThree extends BaseCase {
 
     //region Context
     private static final ApiBaseRequests apiBaseRequests = new ApiBaseRequests();
-    private static String email;
-    private static String password;
     static Stream<Arguments> getUserMethod() {
         return Stream.of(
                 Arguments.of("Mozilla/5.0 (Linux; U; Android 4.0.2; en-us; Galaxy Nexus Build/ICL53F) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30", "Mobile", "Chrome", "iOS"),
@@ -44,9 +42,6 @@ public class HomeThree extends BaseCase {
     @BeforeAll
     public static void setUp() {
         RestAssured.baseURI = "https://playground.learnqa.ru";
-
-        email = "vinkotov@example.com";
-        password = "1234";
     }
 
     //region Tests
@@ -69,8 +64,8 @@ public class HomeThree extends BaseCase {
         Map<String, String> authHeaderTokens = new HashMap<>();
         Map<String, String> authCookiesTokens = new HashMap<>();
 
-        authMap.put("email", email);
-        authMap.put("password", password);
+        authMap.put("email", "vinkotov@example.com");
+        authMap.put("password", "1234");
 
         Response response = apiBaseRequests.postUserWithParams(authMap);
 
